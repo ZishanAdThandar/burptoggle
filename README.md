@@ -1,5 +1,9 @@
 # Burp Toggle Add On for firefox
 
+
+[![License](https://img.shields.io/badge/license-MIT-_red.svg)](https://opensource.org/licenses/MIT)
+![Follow on Twitter](https://img.shields.io/twitter/follow/ZishanAdThandar?style=social)
+
 This addon is to toggle proxy setting from normal to 127.0.0.1:8080. It is a opensource lite weight proxy switch addon for firefox. You can use it for Burp Suite.
 
 # Realease
