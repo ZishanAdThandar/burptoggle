@@ -1,0 +1,29 @@
+{
+  "description": "Burp Proxy Toggler for hackers, Bug Hunters and Web Application Penetration Testers by Zishan Ahamed Thandar.",
+  "manifest_version": 2,
+  "name": "Burp Proxy Toggler by ZishanAdThandar",
+  "icons": {
+    "26" : "icons/icons8-2-26.png"
+    },
+  "version": "23.8",
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "options_ui": {
+      "page": "settings/index.html"
+    },
+
+  "browser_action": {
+    "default_title": "Burp Proxy Toggler by ZishanAdThandar"
+  },
+
+   "permissions": ["proxy", "storage"],
+
+   "applications": {
+    "gecko": {
+      "id": "burptoggle@zishanadthandar.github.io"
+    }
+  }
+}

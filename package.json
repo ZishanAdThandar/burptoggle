@@ -1,0 +1,8 @@
+{
+  "name": "burptoggle",
+  "version": "5.7.9",
+  "description": "Burp Proxy Toggle Lite by ZishanAdThandar",
+  "main": "background.js",
+  "author": "Zishan Ahamed Thandar",
+  "license": "MIT"
+}
