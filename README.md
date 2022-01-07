@@ -16,10 +16,3 @@ Zishan Ahamed Thandar, Indin Bug Hunter
 
 Twitter: https://twitter.com/ZishanAdThandar
 
-# Sponsor
-
-1. https://paypal.me/zishanadthandar
-
-# License
-
-MIT
