@@ -8,7 +8,7 @@
 
 This addon is to toggle proxy setting from normal to 127.0.0.1:8080. It is a opensource lite weight proxy switch addon for firefox. You can use it for Burp Suite.
 
-# Author
+# Developer 
 
 Zishan Ahamed Thandar, Indin Bug Hunter
 
