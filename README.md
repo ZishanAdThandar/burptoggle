@@ -28,7 +28,7 @@ Zishan Ahamed Thandar, Indin Bug Hunter
 ![downloads](https://img.shields.io/amo/dw/burp-proxy-toggler-lite)
 
 
-# Donate (Sponser me anonymously) 
+# Sponsor me anonymously 
 
 1. BTC `bc1q0qhgw5pdys7qqw07rcsyudu5wmv6208nhp5xtn`
 2. USDT (TRC20) `TGW1c7hzyszQNhQHM3aGa1nEKDNuyPueNE`
