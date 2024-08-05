@@ -8,7 +8,9 @@ This addon is to toggle proxy setting from normal to 127.0.0.1:8080. It is a ope
 
 # Developer 
 
-Zishan Ahamed Thandar, Indin Bug Hunter
+Zishan Ahamed Thandar, Indian Bug Hunter
+
+https://ZishanAdThandar.github.io
 
 
 [![Follow on Github](https://img.shields.io/github/followers/ZishanAdThandar?style=social)](https://github.com/ZishanAdThandar)
