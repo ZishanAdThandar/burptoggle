@@ -1,7 +1,6 @@
 # Burp Toggle Add On for firefox
 
 ![Sponser](https://img.shields.io/github/sponsors/ZishanAdThandar)
-![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)
 [![License](https://img.shields.io/badge/license-MIT-_red.svg)](https://opensource.org/licenses/MIT)
 ![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)
 
