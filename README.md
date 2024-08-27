@@ -1,4 +1,4 @@
-# Burp Toggle Add On for firefox
+# 🔄 Burp Toggle Add On for firefox
 
 [![Sponser](https://img.shields.io/github/sponsors/ZishanAdThandar)](https://github.com/sponsors/ZishanAdThandar)
 [![ZishanAdThandar's Pentest Repo stars](https://img.shields.io/github/stars/ZishanAdThandar/burptoggle)](https://github.com/ZishanAdThandar/pentest)
@@ -19,14 +19,11 @@
 - 📦 **Lightweight:** Consumes minimal RAM, ensuring smooth performance. Designed to be fast and efficient.
 - 🚀 **FOSS:** Free and open-source, with code transparency and community contributions.
 
-
-## Note
-1. You need to enable "Run in Private Windows" setting to make it working.
-
 ## 📦 Installation
 
 - Goto [Mozlla Firefox official Extension Page](https://addons.mozilla.org/en-US/firefox/addon/burp-proxy-toggler-lite) and click on **Add to firefox**.
-
+- **Note** You need to enable "Run in Private Windows" setting to make it working.
+  
 ![users](https://img.shields.io/amo/users/burp-proxy-toggler-lite)
 ![downloads](https://img.shields.io/amo/dw/burp-proxy-toggler-lite)
 
