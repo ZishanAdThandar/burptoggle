@@ -25,7 +25,7 @@
 
 ## 📦 Installation
 
-[Burp Proxy Toggle Lite Install](https://addons.mozilla.org/en-US/firefox/addon/burp-proxy-toggler-lite)
+- Goto [Mozlla Firefox official Extension Page](https://addons.mozilla.org/en-US/firefox/addon/burp-proxy-toggler-lite) and click on **Add to firefox**.
 
 ![users](https://img.shields.io/amo/users/burp-proxy-toggler-lite)
 ![downloads](https://img.shields.io/amo/dw/burp-proxy-toggler-lite)
