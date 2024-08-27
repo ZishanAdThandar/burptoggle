@@ -7,21 +7,27 @@
 [![LinkTree](https://img.shields.io/badge/Link-Tree-bbd343)](https://zishanadthandar.github.io/linktree/)
 ![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)
 
-This addon is to toggle proxy setting from normal to 127.0.0.1:8080. It is a opensource lite weight proxy switch addon for firefox. You can use it for Burp Suite.
+
+## 🌟 Introduction
+
+**Burp Toggle** is a free and open-source script that simplifies your Burp Suite workflow by allowing you to enable and disable the Burp Proxy with a single click. Designed to be lightweight and efficient, it consumes minimal RAM, making it ideal for resource-conscious users. 
+
+## ✨ Features
+
+- 🔄 **Toggle Burp Proxy:** Quickly enable or disable the Burp Proxy.
+- ⚙️ **Easy Setup:** Minimal configuration required to get started.
+- ⚙️ **Lightweight:** Consumes minimal RAM, ensuring smooth performance. Designed to be fast and efficient.
+- 🚀 **FOSS:** Free and open-source, with code transparency and community contributions.
+
 
 [![Follow on Github](https://img.shields.io/github/followers/ZishanAdThandar?style=social)](https://github.com/ZishanAdThandar)
 [![Follow on Twitter](https://img.shields.io/twitter/follow/ZishanAdThandar?style=social)](https://twitter.com/ZishanAdThandar)
 
-## Features
-1. Very Lite Weight
-2. Easy to install
-3. Pre configured
-4. One click
 
-# Note
+## Note
 1. You need to enable "Run in Private Windows" setting to make it working.
 
-# Releases
+## 📦 Installation
 
 [Burp Proxy Toggle Lite Install](https://addons.mozilla.org/en-US/firefox/addon/burp-proxy-toggler-lite)
 
@@ -41,7 +47,7 @@ This addon is to toggle proxy setting from normal to 127.0.0.1:8080. It is a ope
 | Portfolio | [ZishanAdThandar.github.io](https://ZishanAdThandar.github.io) |
 | Resume    | [ZishanAdThandar.github.io/CV.pdf](https://ZishanAdThandar.github.io/CV.pdf) |
 
-# Be a Sponsor  
+## Be a Sponsor  
 
 1. https://github.com/sponsors/ZishanAdThandar
 2. https://ZishanAdThandar.github.io/sponsor/
