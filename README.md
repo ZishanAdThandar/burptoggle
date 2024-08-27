@@ -1,4 +1,4 @@
-# 🔄 Burp Toggle Add On for firefox
+# 🔄 Burp Proxy Switch Toggle Lite Add On for firefox
 
 [![Sponser](https://img.shields.io/github/sponsors/ZishanAdThandar)](https://github.com/sponsors/ZishanAdThandar)
 [![ZishanAdThandar's Pentest Repo stars](https://img.shields.io/github/stars/ZishanAdThandar/burptoggle)](https://github.com/ZishanAdThandar/pentest)
