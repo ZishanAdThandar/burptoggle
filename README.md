@@ -14,14 +14,10 @@
 
 ## ✨ Features
 
-- 🔄 **Toggle Burp Proxy:** Quickly enable or disable the Burp Proxy.
+- 🔄 **Toggle Burp Proxy:** Quickly enable or disable the Burp Proxy.## 📦 Installation
 - ⚙️ **Easy Setup:** Minimal configuration required to get started.
-- ⚙️ **Lightweight:** Consumes minimal RAM, ensuring smooth performance. Designed to be fast and efficient.
+- 📦 **Lightweight:** Consumes minimal RAM, ensuring smooth performance. Designed to be fast and efficient.
 - 🚀 **FOSS:** Free and open-source, with code transparency and community contributions.
-
-
-[![Follow on Github](https://img.shields.io/github/followers/ZishanAdThandar?style=social)](https://github.com/ZishanAdThandar)
-[![Follow on Twitter](https://img.shields.io/twitter/follow/ZishanAdThandar?style=social)](https://twitter.com/ZishanAdThandar)
 
 
 ## Note
