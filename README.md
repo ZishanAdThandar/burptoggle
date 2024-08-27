@@ -1,7 +1,7 @@
 # 🔄 Burp Proxy Switch Toggle Lite Add On for firefox
 
 [![Sponser](https://img.shields.io/github/sponsors/ZishanAdThandar)](https://github.com/sponsors/ZishanAdThandar)
-[![ZishanAdThandar's Pentest Repo stars](https://img.shields.io/github/stars/ZishanAdThandar/burptoggle)](https://github.com/ZishanAdThandar/pentest)
+[![ZishanAdThandar's BurpToggle Repo stars](https://img.shields.io/github/stars/ZishanAdThandar/burptoggle)](https://github.com/ZishanAdThandar/burptoggle)
 [![License](https://img.shields.io/github/license/ZishanAdThandar/burptoggle)](https://opensource.org/licenses/MIT)
 [![YouTube](https://img.shields.io/youtube/channel/subscribers/UChgqXa2j7ZKkHX2Y76tSxoA)](https://youtube.com/@hackerstation)
 [![LinkTree](https://img.shields.io/badge/Link-Tree-bbd343)](https://zishanadthandar.github.io/linktree/)
