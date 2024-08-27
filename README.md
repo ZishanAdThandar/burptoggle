@@ -8,16 +8,16 @@
 ![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)
 
 
-## 🌟 Introduction
+## 🌟 Introduction (﷽)
 
 **Burp Toggle** is a free and open-source script that simplifies your Burp Suite workflow by allowing you to enable and disable the Burp Proxy with a single click. Designed to be lightweight and efficient, it consumes minimal RAM, making it ideal for resource-conscious users. 
 
 ## ✨ Features
 
-- 🔄 **Toggle Burp Proxy:** Quickly enable or disable the Burp Proxy.## 📦 Installation
+- 🔄 **Toggle Burp Proxy:** Quickly enable or disable the Burp Proxy.
 - ⚙️ **Easy Setup:** Minimal configuration required to get started.
-- 📦 **Lightweight:** Consumes minimal RAM, ensuring smooth performance. Designed to be fast and efficient.
-- 🚀 **FOSS:** Free and open-source, with code transparency and community contributions.
+- 🧩 **Lightweight:** Consumes minimal RAM, ensuring smooth performance. Designed to be fast and efficient.
+- 🌐 **FOSS:** Free and open-source, with code transparency and community contributions.
 
 ## 📦 Installation
 
@@ -27,7 +27,7 @@
 ![users](https://img.shields.io/amo/users/burp-proxy-toggler-lite)
 ![downloads](https://img.shields.io/amo/dw/burp-proxy-toggler-lite)
 
-## Developer 
+## 📃 Developer 
 
 | Platform  | Link  |
 |-----------|-------|
@@ -40,7 +40,7 @@
 | Portfolio | [ZishanAdThandar.github.io](https://ZishanAdThandar.github.io) |
 | Resume    | [ZishanAdThandar.github.io/CV.pdf](https://ZishanAdThandar.github.io/CV.pdf) |
 
-## Be a Sponsor  
+## 💰 Be a Sponsor  
 
 1. https://github.com/sponsors/ZishanAdThandar
 2. https://ZishanAdThandar.github.io/sponsor/
