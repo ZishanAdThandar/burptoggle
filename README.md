@@ -9,18 +9,16 @@
 
 This addon is to toggle proxy setting from normal to 127.0.0.1:8080. It is a opensource lite weight proxy switch addon for firefox. You can use it for Burp Suite.
 
-# Developer 
-
-Zishan Ahamed Thandar, Indian Bug Hunter
-
-https://ZishanAdThandar.github.io
-
-
 [![Follow on Github](https://img.shields.io/github/followers/ZishanAdThandar?style=social)](https://github.com/ZishanAdThandar)
 [![Follow on Twitter](https://img.shields.io/twitter/follow/ZishanAdThandar?style=social)](https://twitter.com/ZishanAdThandar)
 
-# Note
+## Features
+1. Very Lite Weight
+2. Easy to install
+3. Pre configured
+4. One click
 
+# Note
 1. You need to enable "Run in Private Windows" setting to make it working.
 
 # Releases
@@ -30,7 +28,7 @@ https://ZishanAdThandar.github.io
 ![users](https://img.shields.io/amo/users/burp-proxy-toggler-lite)
 ![downloads](https://img.shields.io/amo/dw/burp-proxy-toggler-lite)
 
-## About Me
+## Developer 
 
 | Platform  | Link  |
 |-----------|-------|
