@@ -29,15 +29,3 @@
 
 Developed by [Zishan Ahamed Thandar](https://ZishanAdThandar.github.io/linktree)
 
-## 💰 Be a Sponsor  
-
-- https://github.com/sponsors/ZishanAdThandar
-- https://ZishanAdThandar.github.io/sponsor/
-
-<!--
-1. BTC `bc1q0qhgw5pdys7qqw07rcsyudu5wmv6208nhp5xtn`
-2. ETH `0x8cdc24eeb9d1bf46929b2106e3535e0d1953fe1b`
-3. ~~USDT (TRC20) `TGW1c7hzyszQNhQHM3aGa1nEKDNuyPueNE`~~ [Invalid]
--->
-
-
