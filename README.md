@@ -19,7 +19,7 @@
 
 ## 📦 Installation
 
-- Goto [Mozlla Firefox official Extension Page](https://addons.mozilla.org/en-US/firefox/addon/burp-proxy-toggler-lite) and click on **Add to firefox**.
+- Goto [Mozilla Firefox official Extension Page](https://addons.mozilla.org/en-US/firefox/addon/burp-proxy-toggler-lite) and click on **Add to firefox**.
 - **Note** You need to enable "**Run in Private Windows**" setting to make it working.
   
 ![users](https://img.shields.io/amo/users/burp-proxy-toggler-lite)
