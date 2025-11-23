@@ -1,4 +1,4 @@
-# 🔄 Burp Proxy Switch Toggle Lite Add On for firefox
+# 🔄 Hacker Proxy Pro Add On for Mozilla Firefox and Google Chrome
 
 [![ZishanAdThandar's BurpToggle Repo stars](https://img.shields.io/github/stars/ZishanAdThandar/burptoggle)](https://github.com/ZishanAdThandar/burptoggle)
 [![License](https://img.shields.io/github/license/ZishanAdThandar/burptoggle)](https://opensource.org/licenses/MIT)
