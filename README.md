@@ -8,7 +8,7 @@
 
 ## 🌟 Introduction (﷽)
 
-**Burp Toggle** is a free and open-source script that simplifies your Burp Suite workflow by allowing you to enable and disable the Burp Proxy with a single click. Designed to be lightweight and efficient, it consumes minimal RAM, making it ideal for resource-conscious users. 
+Hacker Proxy Pro is a premium open source proxy controller for modern browsers that helps you switch between: Direct connection, Burp Suite proxy and Tor. This is a perfect tool for Bug Bounty Hunter. Built for professionals who need speed and reliability during live traffic interception, recon, and debugging. Designed to be lightweight and efficient, it consumes minimal RAM, making it ideal for resource-conscious users. 
 
 ## ✨ Features
 
