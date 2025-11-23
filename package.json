@@ -1,8 +1,25 @@
 {
-  "name": "burptoggle",
-  "version": "5.7.9",
-  "description": "Burp Proxy Toggle Lite by ZishanAdThandar",
+  "name": "hacker-proxy-pro",
+  "version": "1.5.0",
+  "description": "A lightweight, easy-to-use open source proxy switch for Bug Bounty Hunters, Pentesters, and Security Researchers. Developed by Zishan Ahamed Thandar.",
   "main": "background.js",
+  "scripts": {
+    "build": "node build.js",
+    "pack": "npm run build && cd dist/firefox && zip -r ../hacker-proxy-pro-firefox.xpi . && cd ../chrome && zip -r ../hacker-proxy-pro-chrome.zip ."
+  },
+  "keywords": [
+    "proxy",
+    "security",
+    "hacking",
+    "pentesting",
+    "bug-bounty",
+    "burp-suite",
+    "tor",
+    "privacy"
+  ],
   "author": "Zishan Ahamed Thandar",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "fs-extra": "^11.1.1"
+  }
 }

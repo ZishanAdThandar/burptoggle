@@ -1,29 +1,34 @@
 {
-  "description": "Burp Proxy Toggler for hackers, Bug Hunters and Web Application Penetration Testers by Zishan Ahamed Thandar.",
   "manifest_version": 2,
-  "name": "Burp Proxy Toggler by ZishanAdThandar",
-  "icons": {
-    "26" : "icons/icons8-2-26.png"
-    },
-  "version": "23.8",
-
-  "background": {
-    "scripts": ["background.js"]
-  },
-
-  "options_ui": {
-      "page": "settings/index.html"
-    },
+  "name": "Hacker Proxy Pro",
+  "version": "1.5.0",
+  "description": "A lightweight, easy-to-use open source proxy switch for Bug Bounty Hunters, Pentesters, and Security Researchers. Developed by Zishan Ahamed Thandar.",
 
   "browser_action": {
-    "default_title": "Burp Proxy Toggler by ZishanAdThandar"
+    "default_title": "Hacker Proxy Pro – Click to cycle Burp/Tor"
   },
 
-   "permissions": ["proxy", "storage"],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
 
-   "applications": {
+  "permissions": [
+    "proxy",
+    "storage",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+
+  "applications": {
     "gecko": {
-      "id": "burptoggle@zishanadthandar.github.io"
+      "id": "hacker-proxy-pro@zishanadthandar.github.io",
+      "strict_min_version": "57.0"
     }
   }
 }
+
