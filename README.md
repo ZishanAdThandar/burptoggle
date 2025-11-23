@@ -8,7 +8,7 @@
 
 ## 🌟 Introduction (﷽)
 
-Hacker Proxy Pro is a premium open source proxy controller for modern browsers that helps you switch between: Direct connection, Burp Suite proxy and Tor. This is a perfect tool for Bug Bounty Hunter. Built for professionals who need speed and reliability during live traffic interception, recon, and debugging. Designed to be lightweight and efficient, it consumes minimal RAM, making it ideal for resource-conscious users. 
+Hacker Proxy Pro is a premium open source proxy controller for modern browsers that helps you switch between: Direct connection, Burp Suite proxy and Tor. This is a perfect tool for Bug Bounty Hunters, Web Application Penetration Testers or any general Hackers. Built for professionals who need speed and reliability during live traffic interception, recon, and debugging. Designed to be lightweight and efficient, it consumes minimal RAM, making it ideal for resource-conscious users. 
 
 ## ✨ Features
 
