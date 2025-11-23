@@ -10,12 +10,17 @@
 
 Hacker Proxy Pro is a premium open source proxy controller for modern browsers that helps you switch between: Direct connection, Burp Suite proxy and Tor. This is a perfect tool for Bug Bounty Hunters, Web Application Penetration Testers or any general Hackers. Built for professionals who need speed and reliability during live traffic interception, recon, and debugging. Designed to be lightweight and efficient, it consumes minimal RAM, making it ideal for resource-conscious users. 
 
-## ✨ Features
+## ✨ Key Features
 
-- 🔄 **Toggle Burp Proxy:** Quickly enable or disable the Burp Proxy.
-- ⚙️ **Easy Setup:** Minimal configuration required to get started.
-- 🧩 **Lightweight:** Consumes minimal RAM, ensuring smooth performance. Designed to be fast and efficient.
-- 🌐 **FOSS:** Free and open-source, with code transparency and community contributions.
+- One-Click Mode Switching
+  - Instantly toggle between Direct → Burp → Tor → Custom.
+- Smart Badge & Icon System
+  - Clear color-coded badges and SVG icons for each mode.
+- Cross-Browser Support
+  - Works on both Firefox and Chrome.
+- Lightweight Architecture
+  - Built to run smoothly even on resource-constrained machines.
+
 
 ## 📦 Installation on firefox
 
