@@ -31,10 +31,10 @@ Hacker Proxy Pro is a premium open source proxy controller for modern browsers t
 
 ## 📦 Installation on firefox
 
-![users](https://img.shields.io/amo/users/burp-proxy-toggler-lite)
-![downloads](https://img.shields.io/amo/dw/burp-proxy-toggler-lite)
+![users](https://img.shields.io/amo/users/hackerproxypro)
+![downloads](https://img.shields.io/amo/dw/hackerproxypro)
 
-- Goto [Mozilla Firefox official Extension Page](https://addons.mozilla.org/en-US/firefox/addon/burp-proxy-toggler-lite) and click on **Add to firefox**.
+- Goto [Mozilla Firefox official Extension Page](https://addons.mozilla.org/en-US/firefox/addon/hackerproxypro) and click on **Add to firefox**.
 - **Note** You need to enable "**Run in Private Windows**" setting to make it working.
 
 ## 📃 Developer 
