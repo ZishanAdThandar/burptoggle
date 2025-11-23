@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Hacker Proxy Pro",
-  "version": "1.5.0",
+  "version": "150.0.0",
   "description": "A lightweight, easy-to-use open source proxy switch for Bug Bounty Hunters, Pentesters, and Security Researchers. Developed by Zishan Ahamed Thandar.",
 
   "browser_action": {
@@ -24,10 +24,13 @@
     "<all_urls>"
   ],
 
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
-      "id": "hacker-proxy-pro@zishanadthandar.github.io",
-      "strict_min_version": "57.0"
+      "id": "zishanadthandar@hackproof.tech",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   }
 }
