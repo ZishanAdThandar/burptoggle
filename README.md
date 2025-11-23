@@ -21,6 +21,13 @@ Hacker Proxy Pro is a premium open source proxy controller for modern browsers t
 - Lightweight Architecture
   - Built to run smoothly even on resource-constrained machines.
 
+## 🧩 Supported Proxy Modes
+
+| Mode | Description | Default | 
+| --- | --- | --- | 
+| Direct | Connect without a proxy | — | 
+| Burp Suite | HTTP/HTTPS proxy for interception | 127.0.0.1:8080 | 
+| Tor | Network	SOCKS proxy for anonymity | 127.0.0.1:9050 | 
 
 ## 📦 Installation on firefox
 
