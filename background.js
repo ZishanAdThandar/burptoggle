@@ -75,7 +75,7 @@ async function firefoxProxyHandler(details) {
     return { type: "http", host: "127.0.0.1", port: 8080 };
 
   if (mode.id === "tor")
-    return { type: "socks", host: "127.0.0.1", port: 9050 };
+    return { type: "socks", host: "127.0.0.1", port: 9050, proxyDNS: true };
 
   return { type: "direct" };
 }
