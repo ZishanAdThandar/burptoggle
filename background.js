@@ -1,30 +1,23 @@
-// Hacker Proxy Pro – background.js
-// Works in both Firefox (browser.*) and Chrome (chrome.*)
+// Hacker Proxy Pro – Restart-Safe Background Script (MV2)
 
 const isFirefox = typeof browser !== "undefined";
 const api = isFirefox ? browser : chrome;
 
-// Modes: Direct (none), Burp, Tor
+// Modes definition
 const MODES = [
   { id: "none", label: "Direct (no proxy)" },
   { id: "burp", label: "Burp Suite – 127.0.0.1:8080" },
   { id: "tor",  label: "Tor – 127.0.0.1:9050" }
 ];
 
-let currentIndex = 0;
-
-// ================= ICON CACHE + ICON DATA =================
+// ---------------------------- ICON CACHE ----------------------------
 
 const iconCache = new Map();
 
-// Your full icon set (data URIs) + cache
 function getIconData(mode) {
-  // Normalize: our "none" mode may also be stored as "off" in older code
   const key = mode === "off" ? "none" : mode;
 
-  if (iconCache.has(key)) {
-    return iconCache.get(key);
-  }
+  if (iconCache.has(key)) return iconCache.get(key);
 
   const icons = {
     none: {
@@ -44,81 +37,57 @@ function getIconData(mode) {
     }
   };
 
-  const iconData = icons[key] || icons.none;
-  iconCache.set(key, iconData);
-  return iconData;
+  const data = icons[key] || icons.none;
+  iconCache.set(key, data);
+  return data;
 }
 
-// ================= STORAGE HELPERS =================
+// ---------------------------- STORAGE HELPERS ----------------------------
 
 function getStoredModeId(defaultId = "none") {
   return new Promise(resolve => {
-    try {
-      api.storage.local.get({ modeId: defaultId }, result => {
-        resolve(result && result.modeId ? result.modeId : defaultId);
-      });
-    } catch (e) {
-      if (isFirefox && api.storage && api.storage.local) {
-        api.storage.local.get({ modeId: defaultId })
-          .then(result => resolve(result.modeId || defaultId))
-          .catch(() => resolve(defaultId));
-      } else {
-        resolve(defaultId);
-      }
-    }
+    api.storage.local.get({ modeId: defaultId }, result =>
+      resolve(result.modeId || defaultId)
+    );
   });
 }
 
-function setStoredModeId(modeId) {
-  try {
-    api.storage.local.set({ modeId });
-  } catch (e) {
-    if (isFirefox && api.storage && api.storage.local) {
-      api.storage.local.set({ modeId }).catch(() => {});
-    }
-  }
+function setStoredModeId(id) {
+  api.storage.local.set({ modeId: id });
 }
 
-// ================= PROXY HANDLERS =================
-
-function firefoxProxyHandler(details) {
-  const mode = MODES[currentIndex];
-
-  if (mode.id === "burp") {
-    return {
-      type: "http",
-      host: "127.0.0.1",
-      port: 8080
-    };
-  }
-
-  if (mode.id === "tor") {
-    return {
-      type: "socks",
-      host: "127.0.0.1",
-      port: 9050
-    };
-  }
-
-  // Direct connection
-  return {
-    type: "direct"
-  };
+function getModeById(id) {
+  return MODES.find(m => m.id === id) || MODES[0];
 }
 
-function applyFirefoxProxy() {
+function getNextModeId(id) {
+  const i = MODES.findIndex(m => m.id === id);
+  return MODES[(i + 1) % MODES.length].id;
+}
+
+// ---------------------------- FIREFOX PROXY ----------------------------
+
+async function firefoxProxyHandler(details) {
+  const id = await getStoredModeId("none");
+  const mode = getModeById(id);
+
+  if (mode.id === "burp")
+    return { type: "http", host: "127.0.0.1", port: 8080 };
+
+  if (mode.id === "tor")
+    return { type: "socks", host: "127.0.0.1", port: 9050 };
+
+  return { type: "direct" };
+}
+
+async function applyFirefoxProxy() {
   if (!api.proxy || !api.proxy.onRequest) return;
 
-  if (api.proxy.onRequest.hasListener(firefoxProxyHandler)) {
+  if (api.proxy.onRequest.hasListener(firefoxProxyHandler))
     api.proxy.onRequest.removeListener(firefoxProxyHandler);
-  }
 
-  const mode = MODES[currentIndex];
-
-  if (mode.id === "none") {
-    // no listener => direct
-    return;
-  }
+  const id = await getStoredModeId("none");
+  if (id === "none") return;
 
   api.proxy.onRequest.addListener(
     firefoxProxyHandler,
@@ -126,107 +95,93 @@ function applyFirefoxProxy() {
   );
 }
 
-function applyChromeProxy() {
-  if (!api.proxy || !api.proxy.settings) return;
+// ---------------------------- CHROME PROXY ----------------------------
 
-  const mode = MODES[currentIndex];
+async function applyChromeProxy() {
+  const id = await getStoredModeId("none");
+  const mode = getModeById(id);
 
   if (mode.id === "none") {
-    api.proxy.settings.set(
-      {
-        value: { mode: "direct" },
-        scope: "regular"
-      },
-      () => void 0
-    );
+    api.proxy.settings.set({
+      value: { mode: "direct" },
+      scope: "regular"
+    });
     return;
   }
 
   const isBurp = mode.id === "burp";
-  const host = "127.0.0.1";
-  const port = isBurp ? 8080 : 9050;
-  const scheme = isBurp ? "http" : "socks5";
-
-  api.proxy.settings.set(
-    {
-      value: {
-        mode: "fixed_servers",
-        rules: {
-          singleProxy: { scheme, host, port },
-          bypassList: ["<local>"]
-        }
-      },
-      scope: "regular"
+  api.proxy.settings.set({
+    value: {
+      mode: "fixed_servers",
+      rules: {
+        singleProxy: {
+          scheme: isBurp ? "http" : "socks5",
+          host: "127.0.0.1",
+          port: isBurp ? 8080 : 9050
+        },
+        bypassList: ["<local>"]
+      }
     },
-    () => void 0
-  );
+    scope: "regular"
+  });
 }
 
-// ================= UI (ICON + BADGE) =================
+// ---------------------------- UI ICON + BADGE ----------------------------
 
-function updateBrowserAction() {
-  const mode = MODES[currentIndex];
-  const modeId = mode.id;
-  const title = "Hacker Proxy Pro – " + mode.label;
+async function updateBrowserAction() {
+  const id = await getStoredModeId("none");
+  const mode = getModeById(id);
 
-  if (!api.browserAction) return;
+  const action = api.browserAction;
 
-  if (api.browserAction.setTitle) {
-    api.browserAction.setTitle({ title });
-  }
+  action.setTitle({ title: "Hacker Proxy Pro – " + mode.label });
+  action.setIcon({ path: getIconData(mode.id) });
 
-  // ---- ICON ----
-  if (api.browserAction.setIcon) {
-    const iconData = getIconData(modeId);
-    api.browserAction.setIcon({ path: iconData });
-  }
-
-  // ---- BADGE ----
-  if (api.browserAction.setBadgeText && api.browserAction.setBadgeBackgroundColor) {
-    if (modeId === "burp") {
-      // Same theme as Burp icon (#00FF41 with dark text)
-      api.browserAction.setBadgeText({ text: "Burp" });
-      api.browserAction.setBadgeBackgroundColor({ color: [0, 255, 65, 255] }); // #00FF41
-    } else if (modeId === "tor") {
-      // Same theme as Tor icon (#8040A0)
-      api.browserAction.setBadgeText({ text: "Tor" });
-      api.browserAction.setBadgeBackgroundColor({ color: [128, 64, 160, 255] }); // #8040A0
-    } else {
-      // No proxy: no badge (or you can show "Off" with grey bg)
-      api.browserAction.setBadgeText({ text: "" });
-      // Optional: uncomment to give a grey "Off" badge:
-      // api.browserAction.setBadgeText({ text: "Off" });
-      // api.browserAction.setBadgeBackgroundColor({ color: [102, 102, 102, 255] }); // #666666
-    }
-  }
-}
-
-function applyMode() {
-  if (isFirefox) {
-    applyFirefoxProxy();
+  if (mode.id === "burp") {
+    action.setBadgeText({ text: "Burp" });
+    action.setBadgeBackgroundColor({ color: [0, 255, 65, 255] });
+  } else if (mode.id === "tor") {
+    action.setBadgeText({ text: "Tor" });
+    action.setBadgeBackgroundColor({ color: [128, 64, 160, 255] });
   } else {
-    applyChromeProxy();
+    action.setBadgeText({ text: "" });
   }
-  updateBrowserAction();
 }
 
-// ================= INIT =================
+// ---------------------------- APPLY MODE ----------------------------
+
+async function applyMode() {
+  if (isFirefox) await applyFirefoxProxy();
+  else await applyChromeProxy();
+
+  await updateBrowserAction();
+}
+
+// ---------------------------- INIT ----------------------------
 
 async function init() {
-  const storedModeId = await getStoredModeId("burp");
-  const idx = MODES.findIndex(m => m.id === storedModeId);
-  currentIndex = idx >= 0 ? idx : 0;
-
-  applyMode();
+  const id = await getStoredModeId("none");
+  await setStoredModeId(id); // ensure consistency
+  await applyMode();
 }
 
+// On click: switch mode and apply
 if (api.browserAction && api.browserAction.onClicked) {
-  api.browserAction.onClicked.addListener(() => {
-    currentIndex = (currentIndex + 1) % MODES.length;
-    setStoredModeId(MODES[currentIndex].id);
+  api.browserAction.onClicked.addListener(async () => {
+    const current = await getStoredModeId("none");
+    const next = getNextModeId(current);
+    setStoredModeId(next);
     applyMode();
   });
 }
 
+// Ensure restore after sleep/startup
+if (api.runtime.onStartup)
+  api.runtime.onStartup.addListener(init);
+
+if (api.runtime.onInstalled)
+  api.runtime.onInstalled.addListener(init);
+
+// First run
 init();
 
