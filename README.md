@@ -35,7 +35,7 @@ Hacker Proxy Pro is a premium open source proxy controller for modern browsers t
 ![downloads](https://img.shields.io/amo/dw/hackerproxypro)
 
 - Goto [Mozilla Firefox official Extension Page](https://addons.mozilla.org/en-US/firefox/addon/hackerproxypro) and click on **Add to firefox**.
-- **Note** You need to enable "**Run in Private Windows**" setting to make it working.
+- **Note** You need to enable "**Run in Private Windows**" setting in `about:addons` to make it working.
 
 ## 📃 Developer 
 
